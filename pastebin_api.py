@@ -1,17 +1,17 @@
 import requests
 DEVELOPER_KEY = '49msVf603u-ut6bcM9Ug5o_8pniO5xR-'
-PASTEBIN_API_URL ='https://pastebin.com/api/api_post.php'
+PASTEBIN_API_URL = 'https://pastebin.com/api/api_post.php'
 def main():
    
    url = post_new_paste('this is a title', 'this is the body')
    print(f'New past URL: {url}')
 
 def post_new_paste(title, body_text, expiration='10M', listed=False):
-    """Creates a new public PasteBin paste
+    """Creates a new public PasteBin paste.
 
     Args:
         title (str): Paste title
-        body_text (str): Paste body text
+        body_text (str): Paste body text.
         expiration (str, optional): Expiration date of paste (n= never, 10M = minutes, 1H, 1D, 1W, 2W, 1M, 6M, 1Y). Defaults to '10M'.
         listed (bool, optional): Whether paste is publicly listed (True) or not (False) Defaults to False.
 
