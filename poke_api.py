@@ -7,10 +7,10 @@ def main():
     
 # Accept a parameter that specifies the name of the Pokémon or PokéDex number
 def search_for_pokemon(search_term):
-    """ Gets a list of pokemon abilities that contain a search term.
+    """ Gets a list of pokemon abilities.
 
     Args:
-        search_term (str): Pokemon name.
+        search_term (str): Pokemon name or pokedex number.
 
     Returns:
         list: List of Pokemon abilities.

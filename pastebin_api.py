@@ -16,7 +16,7 @@ def post_new_paste(title, body_text, expiration='10M', listed=False):
         listed (bool, optional): Whether paste is publicly listed (True) or not (False) Defaults to False.
 
     Returns:
-        str: URL of the new paste, if successful. None if successful
+        str: URL of the new paste, if successful. None if unsuccessful.
     """
 
 # setup parameters for the request message
@@ -34,12 +34,12 @@ def post_new_paste(title, body_text, expiration='10M', listed=False):
 
     # check whether post requeset was successsful
     if resp_msg.ok:
-        print('Success')
+        print('success.')
         return resp_msg.text
     else:
-        print('Request failed')
-        print(f'Status code: {resp_msg.status_code} ({resp_msg.reason})') 
-        print(f'Reason: {resp_msg.text}')
+        print('request failed.')
+        print(f'Status code: {resp_msg.status_code} ({resp_msg.reason}).') 
+        print(f'Reason: {resp_msg.text}.')
 
 if __name__ == '__main__':
     main()
