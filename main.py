@@ -18,7 +18,7 @@ def main():
     if ability_list:
         title, body_text = get_paste_data(ability_list, search_term)
         paste_url = post_new_paste(title, body_text, '1M')
-        print(f'URL of new paste {paste_url}')
+        print(f'URL of new paste: {paste_url}')
 
 # Get the Pokémon name from command line parameters    
 def get_pokemon_name():
