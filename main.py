@@ -23,8 +23,9 @@ def main():
 # Get the Pokémon name from command line parameters    
 def get_pokemon_name():
     num_params = len(argv) - 1
-    if num_params > 0:
-        return argv[1]
+    if num_params >= 1:
+        search_term = argv[1]
+        return search_term
     else:
         print('Error: Missing search term.')
         exit(1)
