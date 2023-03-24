@@ -31,7 +31,7 @@ def get_pokemon_name():
         exit(1)
     
 def get_paste_data(ability_list, search_term):
-    title = f"{search_term}'s Abilities"
+    title = f"{search_term.title()}'s Abilities"
     separator = '\n- '
     body_text = '- ' + separator.join(ability_list)
     return title, body_text
